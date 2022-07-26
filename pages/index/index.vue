@@ -1,15 +1,11 @@
 <template>
 	<view class="content">
-		<tableBar></tableBar>
 		<u--text type="primary" text="主色"></u--text>
-		<u--text type="error"   text="错误"></u--text>
+		<u--text type="error" text="错误"></u--text>
 		<u--text type="success" text="成功"></u--text>
 		<u--text type="warning" text="警告"></u--text>
-		<u--text type="info"    text="信息"></u--text>
-		<!-- <image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
-		</view> -->
+		<u--text type="info" text="信息"></u--text>
+		<tableBar :tabIndex="name"></tableBar>
 	</view>
 </template>
 
@@ -17,14 +13,11 @@
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				title: 'Hello',
+				name: 0
 			}
 		},
-		onLoad() {
-
-		},
 		methods: {
-
 		}
 	}
 </script>

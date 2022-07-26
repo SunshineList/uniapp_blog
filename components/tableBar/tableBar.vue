@@ -1,11 +1,8 @@
 <template>
 	<view>
-		<u-tabbar :value="value6" @change="name => value6 = name" :fixed="true" :placeholder="true"
-			:safeAreaInsetBottom="true">
-			<u-tabbar-item text="首页" icon="home"></u-tabbar-item>
-			<!-- <u-tabbar-item text="放映厅" icon="photo"></u-tabbar-item> -->
-			<!-- <u-tabbar-item text="直播" icon="play-right"></u-tabbar-item> -->
-			<u-tabbar-item text="我的" icon="account"></u-tabbar-item>
+		<u-tabbar :value="tabIndex" :fixed="true" :placeholder="true" :safeAreaInsetBottom="true">
+			<u-tabbar-item text="首页" icon="home" @click="jumpIndex"></u-tabbar-item>
+			<u-tabbar-item text="我的" icon="account" @click="jumpProfile"></u-tabbar-item>
 		</u-tabbar>
 	</view>
 </template>
@@ -13,10 +10,31 @@
 <script>
 	export default {
 		name: "tableBar",
+		props: {
+			tabIndex: {
+				type: Number,
+				default: 0
+			}
+		},
 		data() {
 			return {
-				value6: 0
+				
 			};
+		},
+		methods: {
+			// changeIndex(name) {
+			// 	this.tabIndex = name
+			// },
+			jumpIndex(name) {
+				uni.redirectTo({
+					url: "/pages/index/index"
+				})
+			},
+			jumpProfile(name) {
+				uni.redirectTo({
+					url: "/pages/profile/profile"
+				})
+			}
 		}
 	}
 </script>

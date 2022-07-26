@@ -1,8 +1,7 @@
 <template>
 	<view>
-		<u--text>
-			我的
-		</u--text>
+		<h1> wode </h1>
+		<tableBar :tabIndex="name"></tableBar>
 	</view>
 </template>
 
@@ -10,11 +9,11 @@
 	export default {
 		data() {
 			return {
-				
+				name: 1
 			}
 		},
 		methods: {
-			
+
 		}
 	}
 </script>
