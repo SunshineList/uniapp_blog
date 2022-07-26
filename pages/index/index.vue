@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		
+		<tableBar></tableBar>
 		<u--text type="primary" text="主色"></u--text>
 		<u--text type="error"   text="错误"></u--text>
 		<u--text type="success" text="成功"></u--text>
@@ -31,28 +31,8 @@
 
 <style>
 	.content {
+		padding-left: 40rpx;
 		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
+		justify-content: space-between;
 	}
 </style>
