@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<h1> wode </h1>
-		<tableBar :tabIndex="name"></tableBar>
+		<!-- <tableBar :tabIndex="name"></tableBar> -->
 	</view>
 </template>
 
